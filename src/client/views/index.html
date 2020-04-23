@@ -20,20 +20,33 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Please enter URL(start with http)">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <h3> Polarity: </div> </h3>
+                <div id="polarity"></div><br>
+                <p>Subjectivity:</p>
+                <div id="subjectivity"></div><br>
+                <p>Polarity Confidence:</p>
+                <div id="polar-conf"></div><br>
+                <p>Subjectivity Confidence:</p>
+                <div id="subj-conf"></div><br>
+                <div id="message-area"></div>
             </section>
         </main>
 
         <footer>
             <p>This is a footer</p>
         </footer>
-
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
     </body>
 </html>
