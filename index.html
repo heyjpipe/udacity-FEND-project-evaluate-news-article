@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <script type="text/javascript" src="../../../dist/main.js"></script>
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Please enter URL(start with http)">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+            <section>
+                <h3> Polarity: </div> </h3>
+                <div id="polarity"></div><br>
+                <p>Subjectivity:</p>
+                <div id="subjectivity"></div><br>
+                <p>Polarity Confidence:</p>
+                <div id="polar-conf"></div><br>
+                <p>Subjectivity Confidence:</p>
+                <div id="subj-conf"></div><br>
+                <div id="message-area"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
