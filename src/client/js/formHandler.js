@@ -5,7 +5,7 @@
     let formText = document.getElementById('name').value
     console.log("formText = ", formText)
     console.log("::: Form Submitted :::")
-    if (Client.checkForName(formText)==true){
+    if (Client.checkForUrl(formText)==true){
     
         fetch('http://localhost:8081/aylien',{
          method: "POST",

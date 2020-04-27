@@ -1,4 +1,4 @@
-function checkForName(inputText) {
+function checkForUrl(inputText) {
     //console.log("::: Running checkForName :::", inputText);
     //let names = [
     //    "Picard",
@@ -26,4 +26,4 @@ function checkForName(inputText) {
         }
 }
 
-export { checkForName }
+export { checkForUrl }
