@@ -1,4 +1,4 @@
-import { checkForUrl } from '../client/js/urlChecker'
+import { checkForUrl } from './urlChecker'
 
 describe('Function "checkForUrl()" should exist' , () => {
     test('It should return true', async () => {
